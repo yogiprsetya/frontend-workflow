@@ -60,7 +60,8 @@ npm init
 ```
 
 Package.json berisi informasi metadata tentang project seperti deskripsi, versi, dan module yang akan digunakan dalam project, dsb. Isinya kira-kira seperti berikut :
-> {
+```
+{
   "name": "mywork",
   "version": "1.0.0",
   "description": "belajar SASS dan Gulp dengan NodeJS",
@@ -71,14 +72,14 @@ Package.json berisi informasi metadata tentang project seperti deskripsi, versi,
   "author": "Sastra Nababan",
   "license": "ISC"
 }
-
+```
 #### Membuat struktur folder
 >mkdir app dist && cd app && mkdir css img js scss && type NUL > scss/style.scss && type NUL > css/style.css && type NUL > index.html && cd..
 
 Maka akan membuat struktur folder sepeti ini:
->+ app
++ app
  - css
-  -- style.css
+ -- style.css
  - img
  - js
  - scss
