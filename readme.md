@@ -153,21 +153,26 @@ var zip = require('gulp-zip');
 var gutil = require('gulp-util');
 var clean = require('gulp-clean');
 
-// Compile SCSS
-gulp.task('sass', function (){
-  return gulp.src('./app/scss/*.scss')
-    .pipe(plumber({
-    	errorHandler:function(err){
-    		 notify.onError({
-    		 	title : "Gulp error in " + err.plugin,
-    		 	message : err.toString()
-    		 	})(err)
-    	}
-    	}))
-    .pipe(sass())
-    .pipe(plumber.stop())
-    .pipe(gulp.dest('./app/css'))
-    .pipe(reload({stream: true}));
+gulp.task('sass', function(){
+    var onError = function(err) {
+        notify.onError({
+            title: "Gulp",
+            subtitle: "Failure!",
+            message: "Error: <%= error.message %>",
+            sound: "Beep"
+        })(err);
+        this.emit('end');
+    };
+   return gulp.src('./app/scss/*.scss')
+       .pipe(plumber({errorHandler: onError}))
+       .pipe(sass({ style: 'expanded' }))
+       .pipe(gulp.dest('./app/css'))
+       .pipe(gulp.dest('./app/css'))
+       .pipe(notify({
+           title: 'Gulp',
+           subtitle: 'success',
+           message: 'Sass task success'
+       }));
 });
 
 // Clean Build Directory
@@ -205,7 +210,6 @@ var fonts= gulp.src('app/fonts/**')
     .pipe(gulp.dest('dist/fonts'));
 
 return merge(cssOptimize,jsOptimize,imgOptimize,htmlOptimize,fonts); 
-
 });
 
 // Deploy to Zip file
