@@ -77,16 +77,17 @@ Package.json berisi informasi metadata tentang project seperti deskripsi, versi,
 >mkdir app dist && cd app && mkdir css img js scss && type NUL > scss/style.scss && type NUL > css/style.css && type NUL > index.html && cd..
 
 Maka akan membuat struktur folder sepeti ini:
-+ app
- - css
- -- style.css
- - img
- - js
- - scss
---style.scss
- - index.html
-+ dist
-
+```
+- app
+-- css
+--- style.css
+-- img
+-- js
+-- scss
+--- style.scss
+-- index.html
+- dist
+```
 Ada 2 folder. Folder app digunakan pada saat proses development. Terdapat file html, css, gambar javascript dan library lain yang digunakan dalam project. Sedangkan dist adalah optimasi dari folder app yang siap untuk di publish.
 
 #### Install package GULP sebagai devDependeny (Lokal)
@@ -238,7 +239,7 @@ Jalankan dengan perintah
 
 Browser akan mebuka lokal server, koding seperti biasa, setiap save file browser akan merefresh otomatis.
 
-Kode error? akan ada notofikasi di pojok kanan atas browser, error log akan ditampilkan pada jendela CMD.
+Kode error? akan ada notifikasi di pojok kanan atas browser, error log akan ditampilkan pada jendela CMD.
 
 ## Time to Deploy
 Untuk membuat file yang sudah di optimasi, mengunakan perintah
