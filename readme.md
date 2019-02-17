@@ -100,21 +100,20 @@ Proses ini akan menghasilkan folder node_modules didalam folder project (mywork)
 2. gulp-sass
 3. browser-sync
 4. gulp-sourcemaps
-5. gulp-autoprefixer
-6. gulp-clean
-7. gulp-minify-html
-8. gulp-uglify
-9. gulp-imagemin
-10. gulp-concat
-11. gulp-cssnano
-12. gulp-plumber
-13. gulp-notify
-14. gulp-zip
-15. merge-stream
-16. gulp-htmlmin
+5. gulp-clean
+6. gulp-minify-html
+7. gulp-uglify
+8. gulp-imagemin
+9. gulp-concat
+10. gulp-cssnano
+11. gulp-plumber
+12. gulp-notify
+13. gulp-zip
+14. merge-stream
+15. gulp-htmlmin
 
 ```
-npm install --save-dev gulp-sass browser-sync gulp-sourcemaps gulp-autoprefixer gulp-clean gulp-minify-html gulp-uglify gulp-imagemin gulp-concat gulp-cssnano gulp-plumber gulp-notify gulp-zip merge-stream gulp-htmlmin
+npm install --save-dev gulp-sass browser-sync gulp-sourcemaps gulp-clean gulp-minify-html gulp-uglify gulp-imagemin gulp-concat gulp-cssnano gulp-plumber gulp-notify gulp-zip merge-stream gulp-htmlmin
 ```
 *Untuk fungsi2 package diatas bisa digoogling*
 
