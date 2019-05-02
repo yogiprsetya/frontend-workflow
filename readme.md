@@ -69,7 +69,7 @@ Package.json berisi informasi metadata tentang project seperti deskripsi, versi,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Sastra Nababan",
+  "author": "Your Nick",
   "license": "ISC"
 }
 ```
